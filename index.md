@@ -16,4 +16,16 @@ The spaces in your title has to be replaced with an underscore `_`. If your arti
 
 > Remember, if you create an article file in any other folder other than the `articles` folder in the external or root directory, your post might not be available on the site.
 
-## 2. Submitting the article
+## 2. Writing the article
+
+The article is written in Markdown format. If you're new to markdown, we suggest you see the <a href='https://www.markdownguide.org/getting-started/' target="_blank">getting started</a>, and <a href='https://www.markdownguide.org/getting-started/' target="_blank">basic syntax</a> modules.
+
+You can also see the [5 min Markdown tutorial](5-min-markdown-tutorial) created by us. That might be of some help.
+
+## 3. Submitting the article
+
+After you've written the article, scroll to the bottom of the GitHub interface where you've written the markdown and click on the `Propse new file` button. After which, you'll be directed to a page where you'll have to click the `Create pull request` button. Once you've done that, your article will be available on the Website within 5-10 minutes.
+
+### Error while submitting
+
+In case you don't find your article on our website, please recheck your file nomenclature. Even after that if your file isin't present on the website, raise an issue [here](https://github.com/GenipapCorporation/biologic.genipap/issues/new).
