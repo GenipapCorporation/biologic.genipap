@@ -12,11 +12,11 @@ const Links = [
   },
   {
     text: "Submit an article",
-    uri: "https://github.com/AnanyaGB/articles/"
+    uri: "https://github.com/GenipapCorporation/biologic.genipap/new/main/articles/"
   },
   {
     text: "Creating a new page",
-    uri: "/e/Creating_a_new_page"
+    uri: "https://genipapcorporation.github.io/biologic.genipap/"
   }
 ];
 

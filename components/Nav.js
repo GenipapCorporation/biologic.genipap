@@ -1,15 +1,16 @@
-import { MenuIcon, NewspaperIcon, PencilIcon, SearchIcon } from "@heroicons/react/outline";
+import { MenuIcon, NewspaperIcon, PencilIcon, SearchIcon, ExclamationCircleIcon } from "@heroicons/react/outline";
 import { HomeIcon, PencilAltIcon, AtSymbolIcon, XCircleIcon, QuestionMarkCircleIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+import { ArticleEditLink, GithubPages, IssuesLink } from "../pages/api/constants"
 
 const navIconsLeft = [
   {
     icon: <PencilIcon className="h-5 w-5" />,
     title: "Submit an article",
-    uri: "https://github.com/AnanyaGB/genipap-biologic/articles/"
+    uri: ArticleEditLink
   },
   {
     icon: <NewspaperIcon className="h-6 w-6" />,
@@ -27,7 +28,7 @@ const NavMenuItems = [
   },
   {
     text: "Submit an article",
-    uri: "https://github.com/AnanyaGB/genipap-biologic/articles/",
+    uri: ArticleEditLink,
     icon: <PencilAltIcon className="h-5 w-5" />,
     class: "mt-[1px]"
   },
@@ -45,8 +46,14 @@ const NavMenuItems = [
   },
   {
     text: "Creating a new page",
-    uri: "/e/Creating_a_new_page",
+    uri: GithubPages,
     icon: <QuestionMarkCircleIcon className="h-5 w-5" />,
+    class: "mt-4"
+  },
+  {
+    text: "Submission issues",
+    uri: IssuesLink,
+    icon: <ExclamationCircleIcon className="h-5 w-5" />,
     class: "mt-[1px]"
   }
 ];

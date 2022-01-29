@@ -25,11 +25,11 @@
 }
 
 .prose h1 {
-  @apply font-bold mt-16 border-b pb-2 text-4xl font-sans scroll-mt-20;
+  @apply font-bold mt-16 border-b pb-2 text-4xl font-serif scroll-mt-20;
 }
 
 .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-  @apply font-bold font-sans scroll-mt-20;
+  @apply font-bold font-serif scroll-mt-20;
 }
 
 .prose img {

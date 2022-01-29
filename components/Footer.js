@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITENAME } from "../pages/api/constants";
+import { ArticleEditLink, GithubPages, IssuesLink, SITENAME } from "../pages/api/constants";
 
 const Links = [
   {
@@ -8,11 +8,15 @@ const Links = [
   },
   {
     text: "Submit an article",
-    uri: "https://github.com/AnanyaGB/articles/"
+    uri: ArticleEditLink,
   },
   {
     text: "Creating a new page",
-    uri: "/e/Creating_a_new_page"
+    uri: GithubPages
+  },
+  {
+    text: "Submission issues",
+    uri: IssuesLink
   }
 ];
 

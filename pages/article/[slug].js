@@ -47,11 +47,13 @@ const date = new Date();
 
 export default function PostPage({ source, frontMatter }) {
 
+  const fileName = frontMatter.title.replace(/ /g, '_');
+
   const functionalLinks = [
     {
       icon: <PencilIcon className='w-5 h-5' />,
       text: "Edit",
-      uri: `https://github.com/AnanyaGB/genipap-biologic${useRouter().asPath}`,
+      uri: `https://github.com/GenipapCorporation/biologic.genipap/edit/main/articles/${fileName}.mdx`,
     },
   ];
 
