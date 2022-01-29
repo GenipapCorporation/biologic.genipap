@@ -1,8 +1,10 @@
-[Go Back](/)
+# 5 min Markdown tutorial
 
 ---
 
-# 5 min Markdown tutorial
+[Go Back](/index)
+
+---
 
 Markdown is usually writing documents for the web. It includes some of the basic syntax shown below.
 
