@@ -2,7 +2,7 @@
 
 ---
 
-[Go Back](/index)
+[Go Back](index)
 
 ---
 
