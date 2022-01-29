@@ -140,12 +140,12 @@ Inserting images has the same method like that of links, starting with a `!`. In
 For example,
 
 ```md
-![Google](https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png)
+![Google](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)
 ```
 
 will give
 
-![Google](https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png)
+![Google](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)
 
 ---
 
