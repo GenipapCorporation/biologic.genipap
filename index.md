@@ -10,6 +10,8 @@ First and foremost you'll need to have a <a href='https://github.com' target="_b
 
 Once you've gone to the `articles` folder (usually the first folder), you'll find files ending with the extension `.mdx`. Create a new file with the name of your article, with a `.mdx` extention. While naming your file, follow the article nomenclature.
 
+[Click on this link](https://github.com/GenipapCorporation/biologic.genipap/new/main/articles/) to skip locating the directory and immediately start writing the article.
+
 ### Article nomenclature
 
 The spaces in your title has to be replaced with an underscore `_`. If your article is titled *Plants and flowers*, you need to name your file as `Plants_and_flowers.mdx`. Another example, for an article titled *Human evolution*, the file needs to be saved as `Human_evolution.mdx`.
