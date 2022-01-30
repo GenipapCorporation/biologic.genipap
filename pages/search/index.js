@@ -11,13 +11,14 @@ import { useRouter } from 'next/router'
 export default function SearchTest({ posts }) {
 
   const { query } = useRouter();
+  const q = query.q !== undefined ? query.q.toString().toLowerCase() : query.q
+  console.log(q)
   const allPosts = posts.map(post => post.data.title)
   const allPostDesc = posts.map(post => post.data.description)
-  const searchQ = allPosts.filter(post => post.toString().toLowerCase().includes(query.q))
+  const searchQ = allPosts.filter(post => post.toString().toLowerCase().includes(q))
   const noArtiFound = <div>
     <div className='text-center text-xl font-bold text-red-600'>No articles found!</div><div className='mt-6 text-teal-600 text-center'>Make an empty search to see all articles [A-Z]</div>
   </div>
-  console.log(allPostDesc)
   return (
     <>
       <Head>
