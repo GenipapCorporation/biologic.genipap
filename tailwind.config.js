@@ -5,8 +5,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ["Arimo", "system-ui"],
-      'serif': ["Lora", "serif"],
+      'sans': ["PT Sans", "system-ui"],
+      'serif': ["PT Serif", "serif"],
       'mono': ["Inconsolata", "monospace"]
     },
     extend: {},
