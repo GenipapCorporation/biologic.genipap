@@ -35,10 +35,10 @@ export default function Index() {
               </div>
               <div className="text-teal-700 font-bold font-serif italic text-6xl md:text-8xl">Biologic</div>
             </div>
-            <div className="flex mt-12 mx-auto gap-2 border px-2 py-2 pr-0 focus-within:ring-2 max-w-lg items-center">
+            <form className="flex mt-12 mx-auto gap-2 border px-2 py-2 pr-0 focus-within:ring-2 max-w-lg items-center" action="/search/" method="GET">
               <SearchIcon className="w-6 h-6 flex-1" />
-              <input placeholder="Search Genipap Biologic" className="flex-[11] outline-none text-lg" />
-            </div>
+              <input placeholder="Search Genipap Biologic" className="flex-[11] outline-none text-lg" name="q" />
+            </form>
           </div>
         </div>
       </Container>

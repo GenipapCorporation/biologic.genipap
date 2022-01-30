@@ -16,6 +16,7 @@ import remarkSlug from 'remark-slug'
 import { LinkIcon, PencilIcon, ShareIcon, ClipboardCopyIcon, BookOpenIcon, XCircleIcon } from '@heroicons/react/solid'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import TableOfContents from '../../components/TableOfContents'
 
 const heading = (Tag) => (props) => {
   if (!props.id) return <Tag {...props} />
@@ -114,7 +115,7 @@ export default function PostPage({ source, frontMatter }) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous"></link>
       </Head>
       <Container>
-        <div className='text-5xl md:text-6xl font-bold'>
+        <div className='text-5xl md:text-6xl font-serif font-bold'>
           {frontMatter.title}
         </div>
         <div className='text-neutral-700 italic mt-6 mb-6 text-lg'>{frontMatter.description}</div>
@@ -136,7 +137,8 @@ export default function PostPage({ source, frontMatter }) {
             <div>Cite</div>
           </button>
         </div>
-        <div className='prose mt-16 font-serif md:prose-lg prose-blue'>
+        <TableOfContents /> 
+        <div className='prose mt-16 md:prose-lg prose-blue'>
           <MDXRemote {...source} components={components} />
         </div>
         <div className='flex gap-1 mt-16 pt-6 border-t'>

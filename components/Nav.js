@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { ArticleEditLink, GithubPages, IssuesLink } from "../pages/api/constants"
+import SearchComp from "./Search";
 
 const navIconsLeft = [
   {
@@ -22,7 +23,7 @@ const navIconsLeft = [
 const NavMenuItems = [
   {
     text: "Home",
-    uri: "/home",
+    uri: "/",
     icon: <HomeIcon className="h-5 w-5" />,
     class: ""
   },
@@ -84,7 +85,7 @@ export default function Nav() {
                       <Link href={item.uri}>
                         <a className={`flex h-12 px-6 bg-white items-center gap-3 hover:bg-gray-100 ${item.class}`}>
                           {item.icon}
-                          <div className="font-bold">{item.text}</div>
+                          <div className="font-semibold">{item.text}</div>
                         </a>
                       </Link>
                     </Menu.Item>
@@ -102,10 +103,7 @@ export default function Nav() {
             </Link>
           </div>
           <div className="flex-[2] md:flex hidden">
-            <div className="flex gap-2 bg-white px-2 py-2 focus-within:ring-2 items-center w-full">
-              <SearchIcon className="h-5 w-5 flex-1" />
-              <input placeholder="Search Genipap Biologic" className="block bg-transparent flex-[11] outline-none" />
-            </div>
+            <SearchComp />
           </div>
           <div className="flex items-center flex-1 justify-end">
             {navIconsLeft.map((icon) => (
@@ -122,10 +120,7 @@ export default function Nav() {
             </button>
             { search && 
                 <div className="fixed top-0 left-0 right-0 h-12 bg-gray-100 flex items-center gap-4 px-6 z-[51]">
-                  <div className="flex gap-2 bg-white px-2 h-8 focus-within:ring-2 items-center w-full">
-                    <SearchIcon className="h-5 w-5 flex-1" />
-                    <input placeholder="Search Genipap Biologic" className="block bg-transparent flex-[11] outline-none" />
-                  </div>
+                  <SearchComp />
                   <button onClick={() => setSearch(false)}><XCircleIcon className="h-6 w-6" /></button>
                 </div>
             }
