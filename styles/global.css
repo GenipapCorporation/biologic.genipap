@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .prose {
-  @apply min-w-full text-black;
+  @apply min-w-full text-black font-light;
 }
 
 .prose strong {

@@ -119,7 +119,7 @@ export default function PostPage({ source, frontMatter }) {
           {frontMatter.title}
         </div>
         <div className='text-neutral-700 italic mt-6 mb-6 text-lg'>{frontMatter.description}</div>
-        <div className='flex gap-1'>
+        <div className='flex gap-1 bg-white'>
           {functionalLinks.map((item) => (
             <Link href={item.uri}>
               <a className='flex-1 bg-gray-100 items-center justify-center flex gap-2 h-8'>
@@ -138,7 +138,7 @@ export default function PostPage({ source, frontMatter }) {
           </button>
         </div>
         <TableOfContents /> 
-        <div className='prose mt-16 prose-blue prose-sm'>
+        <div className='prose mt-16 prose-blue'>
           <MDXRemote {...source} components={components} />
         </div>
         <div className='flex gap-1 mt-16 pt-6 border-t'>
