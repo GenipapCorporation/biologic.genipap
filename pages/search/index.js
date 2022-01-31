@@ -35,7 +35,7 @@ export default function SearchTest({ posts }) {
               <Link href={`/article/${allPosts[arrChk.indexOf(item)].replace(/\s/g, '_')}`}>
                 <a className='block max-w-fit text-sm text-teal-600'>{`https://biologic.genipap.tk/article/${allPosts[arrChk.indexOf(item)].replace(/\s/g, '_')}`}</a>
               </Link>
-              <Link href={`/article/${item.replace(/\s/g, '_')}`}>
+              <Link href={`/article/${allPosts[arrChk.indexOf(item)].replace(/\s/g, '_')}`}>
                 <a className='text-blue-600 font-semibold block max-w-fit text-2xl mt-px hover:underline'>{allPosts[arrChk.indexOf(item)]}</a>
               </Link>
               <div className='mt-1 font-light text-neutral-600'>{allPostDesc[arrChk.indexOf(item)]}</div>
