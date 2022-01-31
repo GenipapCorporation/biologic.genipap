@@ -5,9 +5,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ["Segoe UI", "SF Pro Text", "Arimo", "system-ui"],
-      'serif': ["Lora", "serif"],
-      'mono': ["Inconsolata", "monospace"]
+      'sans': ["Roboto", "system-ui"],
+      'serif': ["Roboto Slab", "serif"],
+      'mono': ["Roboto Mono", "monospace"]
     },
     extend: {},
   },
