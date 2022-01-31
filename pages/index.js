@@ -4,6 +4,7 @@ import path from "path";
 import { Container } from "../components/StyledContent";
 import Image from "next/image";
 import { SearchIcon } from "@heroicons/react/outline"
+import Search from "../components/Search";
 
 const Links = [
   {
@@ -35,10 +36,13 @@ export default function Index() {
               </div>
               <div className="text-teal-700 font-bold font-serif italic text-6xl md:text-8xl">Biologic</div>
             </div>
-            <form className="flex mt-12 mx-auto gap-2 border px-2 py-2 pr-0 focus-within:ring-2 max-w-lg items-center" action="/search/" method="GET">
+            {/* <form className="flex mt-12 mx-auto gap-2 border px-2 py-2 pr-0 focus-within:ring-2 max-w-lg items-center" action="/search/" method="GET">
               <SearchIcon className="w-6 h-6 flex-1" />
               <input placeholder="Search Genipap Biologic" className="flex-[11] outline-none font-light" name="q" />
-            </form>
+            </form> */}
+            <div className="mt-12 max-w-xl mx-auto">
+              <Search />
+            </div>
           </div>
         </div>
       </Container>

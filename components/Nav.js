@@ -6,6 +6,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { ArticleEditLink, GithubPages, IssuesLink } from "../pages/api/constants"
 import SearchComp from "./Search";
+import { useRouter } from "next/router";
 
 const navIconsLeft = [
   {
@@ -13,11 +14,11 @@ const navIconsLeft = [
     title: "Submit an article",
     uri: ArticleEditLink
   },
-  {
-    icon: <NewspaperIcon className="h-6 w-6" />,
-    title: "Sign up for newsletter",
-    uri: "/newsletter"
-  }
+  // {
+  //   icon: <NewspaperIcon className="h-6 w-6" />,
+  //   title: "Sign up for newsletter",
+  //   uri: "/newsletter"
+  // }
 ];
 
 const NavMenuItems = [
@@ -66,8 +67,8 @@ export default function Nav() {
   return (
     <>
       <div className="bg-gray-100 shadow border-b sticky top-0 z-50">
-        <div className="max-w-4xl flex mx-auto justify-between items-center h-12 md:h-16 px-6">
-          <div className="gap-2 flex items-center flex-1">
+        <div className="max-w-4xl flex mx-auto justify-between items-center h-12 md:h-16 px-4">
+          <div className="gap-1 flex items-center flex-1">
             <Menu>
               <Menu.Button title="Open menu" className="h-12 w-12 grid place-items-center hover:bg-gray-200"><MenuIcon className="h-6 w-6" /></Menu.Button>
               <Transition
@@ -85,7 +86,7 @@ export default function Nav() {
                       <Link href={item.uri}>
                         <a className={`flex h-12 px-6 bg-white items-center gap-3 hover:bg-gray-100 ${item.class}`}>
                           {item.icon}
-                          <div className="font-semibold">{item.text}</div>
+                          <div className="font-base">{item.text}</div>
                         </a>
                       </Link>
                     </Menu.Item>
@@ -102,7 +103,7 @@ export default function Nav() {
               </a>
             </Link>
           </div>
-          <div className="flex-[2] md:flex hidden">
+          <div className={`flex-[2] hidden ${useRouter().pathname !== '/' ? "md:flex" : "hidden"}`}>
             <SearchComp />
           </div>
           <div className="flex items-center flex-1 justify-end">
