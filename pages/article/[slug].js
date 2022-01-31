@@ -138,7 +138,7 @@ export default function PostPage({ source, frontMatter }) {
           </button>
         </div>
         <TableOfContents /> 
-        <div className='prose mt-16 prose-blue md:prose-lg'>
+        <div className='prose mt-16 prose-blue leading-loose md:prose-lg'>
           <MDXRemote {...source} components={components} />
         </div>
         <div className='flex gap-1 mt-16 pt-6 border-t'>
