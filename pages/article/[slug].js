@@ -108,6 +108,26 @@ export default function PostPage({ source, frontMatter }) {
     }, 2000);
   }
 
+  const functionalTabsDisp =
+    <div className='flex gap-1 bg-white'>
+      {functionalLinks.map((item) => (
+        <Link href={item.uri}>
+          <a className='flex-1 bg-gray-100 items-center justify-center flex gap-2 h-8'>
+            {item.icon}
+            <div>{item.text}</div>
+          </a>
+        </Link>
+      ))}
+      <button className='flex-1 bg-gray-100 items-center justify-center flex gap-2 h-8' onClick={copy}>
+        <ClipboardCopyIcon className='w-5 h-5' />
+        <div>{showCopyValue}</div>
+      </button>
+      <button className='flex-1 bg-gray-100 items-center justify-center flex gap-2 h-8' onClick={() => setShowCiteCont(true)}>
+        <BookOpenIcon className='w-5 h-5' />
+        <div>Cite</div>
+      </button>
+    </div>;
+
   return (
     <>
       <Head>
@@ -119,46 +139,12 @@ export default function PostPage({ source, frontMatter }) {
           {frontMatter.title}
         </div>
         <div className='text-neutral-700 italic mt-6 mb-6 text-lg'>{frontMatter.description}</div>
-        <div className='flex gap-1 bg-white'>
-          {functionalLinks.map((item) => (
-            <Link href={item.uri}>
-              <a className='flex-1 bg-gray-100 items-center justify-center flex gap-2 h-8'>
-                {item.icon}
-                <div>{item.text}</div>
-              </a>
-            </Link>
-          ))}
-          <button className='flex-1 bg-gray-100 items-center justify-center flex gap-2 h-8' onClick={copy}>
-            <ClipboardCopyIcon className='w-5 h-5' />
-            <div>{showCopyValue}</div>
-          </button>
-          <button className='flex-1 bg-gray-100 items-center justify-center flex gap-2 h-8' onClick={() => setShowCiteCont(true)}>
-            <BookOpenIcon className='w-5 h-5' />
-            <div>Cite</div>
-          </button>
-        </div>
+        {functionalTabsDisp}
         <TableOfContents /> 
         <div className='prose mt-16 prose-blue'>
           <MDXRemote {...source} components={components} />
         </div>
-        <div className='flex gap-1 mt-16 pt-6 border-t'>
-          {functionalLinks.map((item) => (
-            <Link href={item.uri}>
-              <a className='flex-1 bg-gray-100 items-center justify-center flex gap-2 h-8'>
-                {item.icon}
-                <div>{item.text}</div>
-              </a>
-            </Link>
-          ))}
-          <button className='flex-1 bg-gray-100 items-center justify-center flex gap-2 h-8' onClick={copy}>
-            <ClipboardCopyIcon className='w-5 h-5' />
-            <div>{showCopyValue}</div>
-          </button>
-          <button className='flex-1 bg-gray-100 items-center justify-center flex gap-2 h-8' onClick={() => setShowCiteCont(true)}>
-            <BookOpenIcon className='w-5 h-5' />
-            <div>Cite</div>
-          </button>
-        </div>
+        {functionalTabsDisp}
       </Container>
       { showCiteCont && <div className='fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40 grid place-items-center'>
         <div className='p-6 pt-0 max-w-xl shadow-2xl shadow-black bg-white max-h-[75vh] overflow-y-scroll'>

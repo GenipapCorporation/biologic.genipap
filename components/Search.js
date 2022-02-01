@@ -29,7 +29,7 @@ export default function Search ({action = '/search'}) {
          onChange={handleParam(setQuery)}
          placeholder="Search Genipap Biologic"
          aria-label='Search'
-         className="py-2 block bg-transparent flex-[11] outline-none font-light pl-4"
+         className="py-2 block bg-transparent flex-[11] outline-none pl-4"
        />
        <button type="submit" className="text-sm bg-blue-500 text-white flex-[2] grid place-items-center">
          <SearchIcon className="h-5 w-5" />

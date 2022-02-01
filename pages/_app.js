@@ -8,6 +8,10 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="shortcut icon" href="/logo.png" />
+        <link
+          rel="stylesheet"
+          href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"
+        />
       </Head>
       <Layout>
         <NextNprogress

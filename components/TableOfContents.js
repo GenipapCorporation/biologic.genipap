@@ -35,17 +35,17 @@ function Headings ({ headings }) {
 
   return (
     <div className="mt-16 bg-gray-100 max-w-xs">
-      <button className="text-xl font-bold p-6 w-full flex justify-between items-center" onClick={() => setShowList(priorState => !priorState)}>Table of contents
+      <button className="text-lg font-bold p-6 py-4 w-full flex justify-between items-center" onClick={() => setShowList(priorState => !priorState)}>Table of contents
         { showList ? <ChevronUpIcon className="h-5 w-5" /> : <ChevronDownIcon className="h-5 w-5" /> }
       </button>
-      {showList ? <ul className="list-decimal list-inside leading-relaxed p-6 pt-0">
+      {showList ? <ul className="list-decimal list-inside leading-loose p-6 pt-0 text-sm">
         {headings.map((heading) => (
           <li key={heading.title} className="list-item">
             <a href={`#${heading.id}`} className="text-blue-600 hover:underline">{heading.title}</a>
             {heading.items.length > 0 && (
               <ul className="list-disc">
                 {heading.items.map((child) => (
-                  <li key={child.id} className="list-item ml-12">
+                  <li key={child.id} className="list-item ml-8">
                     <a href={`#${child.id}`} className="text-blue-600 hover:underline">{child.title}</a>
                   </li>
                 ))}

@@ -5,8 +5,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ["Roboto", "system-ui"],
-      'serif': ["Roboto Slab", "serif"],
+      'sans': ["Segoe UI", "Open Sans", "system-ui"],
+      'serif': ["Lora", "serif"],
       'mono': ["Roboto Mono", "monospace"]
     },
     extend: {},
