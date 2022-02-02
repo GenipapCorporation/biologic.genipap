@@ -34,11 +34,11 @@ function Headings ({ headings }) {
   const [showList, setShowList] = useState(false);
 
   return (
-    <div className="mt-16 bg-gray-100 max-w-xs">
+    <div className="mt-16 bg-gray-50 max-w-xs lg:sticky lg:top-16 lg:flex-shrink-0 lg:w-[20rem]">
       <button className="text-lg font-bold p-6 py-4 w-full flex justify-between items-center" onClick={() => setShowList(priorState => !priorState)}>Table of contents
         { showList ? <ChevronUpIcon className="h-5 w-5" /> : <ChevronDownIcon className="h-5 w-5" /> }
       </button>
-      {showList ? <ul className="list-decimal list-inside leading-loose p-6 pt-0 text-sm">
+      {showList ? <ul className="list-decimal list-inside leading-loose p-6 pt-0 text-sm lg:max-h-[32rem] lg:overflow-y-scroll">
         {headings.map((heading) => (
           <li key={heading.title} className="list-item">
             <a href={`#${heading.id}`} className="text-blue-600 hover:underline">{heading.title}</a>

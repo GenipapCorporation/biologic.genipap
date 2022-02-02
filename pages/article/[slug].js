@@ -140,9 +140,11 @@ export default function PostPage({ source, frontMatter }) {
         </div>
         <div className='text-neutral-700 italic mt-6 mb-6 text-lg'>{frontMatter.description}</div>
         {functionalTabsDisp}
-        <TableOfContents /> 
-        <div className='prose mt-16 prose-blue'>
-          <MDXRemote {...source} components={components} />
+        <div className='lg:flex my-16 lg:flex-row-reverse lg:justify-between'>
+          <TableOfContents />
+          <div className='prose mt-16 mx-auto lg:mx-0 lg:mt-0 prose-blue'>
+            <MDXRemote {...source} components={components} />
+          </div>
         </div>
         {functionalTabsDisp}
       </Container>

@@ -67,8 +67,8 @@ export default function Nav() {
   return (
     <>
       <div className="bg-gray-100 shadow border-b sticky top-0 z-50">
-        <div className="max-w-4xl flex mx-auto justify-between items-center h-12 md:h-16 px-4">
-          <div className="gap-1 flex items-center flex-1">
+        <div className="max-w-5xl flex mx-auto justify-between items-center h-12 md:h-16 px-4">
+          <div className="lg:gap-4 flex items-center flex-1">
             <Menu>
               <Menu.Button title="Open menu" className="h-12 w-12 grid place-items-center hover:bg-gray-200"><MenuIcon className="h-6 w-6" /></Menu.Button>
               <Transition
