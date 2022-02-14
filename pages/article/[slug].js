@@ -142,7 +142,7 @@ export default function PostPage({ source, frontMatter }) {
         {functionalTabsDisp}
         <div className='lg:flex my-16 lg:flex-row-reverse lg:justify-between'>
           <TableOfContents />
-          <div className='prose mt-16 mx-auto lg:mx-0 lg:mt-0 prose-blue'>
+          <div className='prose mt-16 mx-auto lg:mx-0 lg:mt-0 prose-blue relative'>
             <MDXRemote {...source} components={components} />
           </div>
         </div>
