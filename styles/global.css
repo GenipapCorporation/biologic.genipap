@@ -14,11 +14,6 @@
 
 .prose p {
   /* @apply text-black; */
-  @apply text-sm
-}
-
-.prose p * {
-  @apply text-sm
 }
 
 .prose a {
