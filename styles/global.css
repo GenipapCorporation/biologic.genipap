@@ -8,12 +8,12 @@
   /* @apply min-w-full; */
 }
 
-.prose strong {
+/* .prose strong {
   @apply font-bold;
-}
+} */
 
 .prose p {
-  /* @apply text-black; */
+  /* @apply text-black */
 }
 
 .prose a {
@@ -43,4 +43,8 @@
 
 .prose code::before, .prose code::after {
   content: "";
+}
+
+.prose table {
+  @apply block w-full overflow-x-scroll
 }
