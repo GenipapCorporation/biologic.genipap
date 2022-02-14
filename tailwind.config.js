@@ -5,7 +5,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['Arial', 'Arimo', 'sans-serif'],
+      'sans': ['Arimo', 'sans-serif'],
       'serif': ["Lora", "serif"],
       'mono': ["Roboto Mono", "monospace"]
     },
