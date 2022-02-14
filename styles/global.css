@@ -16,6 +16,10 @@
   /* @apply text-black; */
 }
 
+.prose p * {
+  @apply text-sm
+}
+
 .prose a {
   @apply no-underline;
 }
